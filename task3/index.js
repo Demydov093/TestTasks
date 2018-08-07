@@ -28,15 +28,12 @@ function addItem() {
             loadList();
         }
     }
-
-
 }
 
 function validateForm() {
     var name = document.forms["f"]["name"].value;
     var lastName = document.forms["f"]["lastName"].value;
     var email = document.forms["f"]["email"].value;
-    console.log(validateEmail(email));
     if (name == "") {
         alert("Name must be filled out");
         return false;
@@ -123,14 +120,11 @@ function removeAllRows() {
     for (var i = 1; i < items.length+1; i++) {
         rows.deleteRow(1);
     }
-
 }
 
 function updateRow(src){
     updateMode = true;
     var oRow = src.parentElement.parentElement;
-    console.log(oRow.rowIndex);
-    console.log(items);
     index = oRow.rowIndex - 1;
     document.getElementById("name").value = items[index].name;
     document.getElementById("lastName").value = items[index].lastName;
