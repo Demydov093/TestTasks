@@ -1,0 +1,14 @@
+table, th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+form {
+    width: 300px;
+    box-shadow: 0 0 5px #aaa;
+    padding: 30px;
+    margin-right: 30px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
