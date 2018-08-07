@@ -17,18 +17,14 @@ function addItem() {
             let date = todayFunc();
             const item = {'name' :name, 'lastName' :lastName, 'email':email, 'Date': date};
             items.push(item);
-            document.getElementById("name").value = '';
-            document.getElementById("lastName").value = '';
-            document.getElementById("email").value = '';
+            clear();
             addRow(item);
         } else {
             removeAllRows();
             items[index].name = document.getElementById("name").value;
             items[index].lastName = document.getElementById("lastName").value;
             items[index].email = document.getElementById("email").value;
-            document.getElementById("name").value = '';
-            document.getElementById("lastName").value = '';
-            document.getElementById("email").value = '';
+            clear();
             loadList();
         }
     }
@@ -141,3 +137,9 @@ function updateRow(src){
     document.getElementById("email").value = items[index].email;
 }
 
+
+function clear() {
+    document.getElementById("name").value = '';
+    document.getElementById("lastName").value = '';
+    document.getElementById("email").value = '';
+}
